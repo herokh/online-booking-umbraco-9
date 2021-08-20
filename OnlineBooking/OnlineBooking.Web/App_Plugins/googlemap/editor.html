@@ -1,0 +1,25 @@
+﻿<div ng-controller="googlemap.grideditorcontroller" class="googlemap-grideditor">
+
+    <div ng-if="control.value !== null">
+        <div class="relative" ng-click="openSettingsPanel()">
+            <div ng-bind-html="renderHtml()"></div>
+
+            <div class="umb-grid-media--controls">
+                <umb-button type="button"
+                            button-style="info"
+                            label-key="general_edit">
+                </umb-button>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="control.value === null">
+        <button type="button" class="btn-reset umb-editor-placeholder" ng-click="openSettingsPanel()">
+            <umb-icon icon="icon-map-location" class="icon"></umb-icon>
+            <span class="help-text">
+                <span>Click to insert Google Map</span>
+            </span>
+        </button>
+    </div>
+
+</div>

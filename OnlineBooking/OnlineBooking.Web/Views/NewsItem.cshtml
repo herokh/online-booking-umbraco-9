@@ -1,0 +1,23 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using OnlineBooking.ViewModel.News;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<NewsDetailView>
+@{
+    Layout = "MasterPage.cshtml";
+}
+
+@* the fun starts here *@
+<div class="card">
+    <div>
+        <a href="@Model.ParentUrl" class="btn btn-link">Go back</a>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title</h5>
+        <small class="d-flex flex-column">
+            <span>Published Date: @Model.Created.ToString("dd MMMM yyyy HH:mm")</span>
+            <span>Published By: @Model.CreatedBy</span>
+        </small>
+        <p class="card-text">
+            @Html.Raw(Model.Content)
+        </p>
+    </div>
+</div>

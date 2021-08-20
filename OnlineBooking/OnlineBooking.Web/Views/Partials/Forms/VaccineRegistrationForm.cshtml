@@ -1,0 +1,19 @@
+﻿@using OnlineBooking.ViewModel.Forms
+@model VaccineRegistrationView
+
+@if (@TempData["ErrorMessages"] != null)
+{
+    <div class="alert alert-danger">
+        @Html.Raw(TempData["ErrorMessages"].ToString())
+    </div>
+}
+
+<div class="card">
+    <div class="card-body">
+        @using (Html.BeginUmbracoForm("Register", "VaccineRegistrationSurface"))
+        {
+            @Html.EditorFor(x => Model)
+            <input type="submit" class="btn btn-primary" />
+        }
+    </div>
+</div>

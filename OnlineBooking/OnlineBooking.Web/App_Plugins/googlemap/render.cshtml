@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<dynamic>
+
+@if (Model != null && Model.value != null)
+{
+    <div class="map-wrapper" style="height: @Html.Encode(@Model.value.height)px">
+        <div class="map-responsive">
+            @Html.Raw(@Model.value.src)
+        </div>
+    </div>
+
+}

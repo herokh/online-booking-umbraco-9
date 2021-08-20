@@ -1,0 +1,29 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using OnlineBooking.ViewModel.News; 
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<NewsListView>
+@{
+	Layout = "MasterPage.cshtml";
+}
+
+@* the fun starts here *@
+
+<div class="mb-4">
+    <h2 class="mb-0">@Model.Title</h2>
+    <small>@Model.BriefText</small>
+</div>
+<div class="row">
+	@foreach (var item in Model.Items)
+    {
+        <div class="col-12">
+            <div class="shadow-sm p-3 mb-5 bg-body">
+                <h5 class="mb-2">@item.Title</h5>
+                <div class="d-flex flex-column">
+                    <span>@Html.Raw(Html.Truncate(item.Content, 100))</span>
+                    <span>
+                        <a class="btn btn-link" href="@item.Url">Read more</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    }
+</div>

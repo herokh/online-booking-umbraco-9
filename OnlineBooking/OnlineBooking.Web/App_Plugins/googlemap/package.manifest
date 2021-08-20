@@ -1,0 +1,16 @@
+﻿{
+  "gridEditors": [
+    {
+      "name": "Google Map",
+      "alias": "googlemap",
+      "view": "/App_Plugins/googlemap/editor.html",
+      "render": "/App_Plugins/googlemap/render.cshtml",
+      "icon": "icon-map-location"
+    }
+  ],
+  "javascript": [
+    "/App_Plugins/googlemap/editor.controller.js",
+    "/App_Plugins/googlemap/editor-panel.controller.js"
+  ],
+  "css": [ "/App_Plugins/googlemap/editor.css" ]
+}
