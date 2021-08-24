@@ -1,0 +1,25 @@
+{
+  "propertyEditors": [
+    {
+      "alias": "my.note",
+      "name": "Note",
+      "icon": "icon-note",
+      "editor": {
+        "view": "~/App_Plugins/note/editor.html"
+      },
+      "prevalues": {
+        "fields": [
+          {
+            "label": "Note",
+            "description": "Enter a note...",
+            "key": "note",
+            "view": "textarea"
+          }
+        ]
+      }
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/note/editor.controller.js"
+  ]
+}

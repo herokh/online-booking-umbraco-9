@@ -40,5 +40,7 @@
 
     <script src="@Url.Content("~/scripts/Main.js")"></script>
 
+    @await Component.InvokeAsync("Chatbot", Model)
+
 </body>
 </html>

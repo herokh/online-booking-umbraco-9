@@ -38,7 +38,7 @@ namespace OnlineBooking.Application.Services
 
             var contentAtRoot = publishedContent.Root();
             var formSettings = contentAtRoot.GetFormSettingsNode(DocumentPropertyAliases.FormMappingsVaccineRegistration, _variationContextAccessor);
-            var emailTemplateSettings = formSettings.FirstChildOfType(_variationContextAccessor, DocumentTypeAliases.VaccineRegistrationEmailSettings);
+            var emailTemplateSettings = formSettings.FirstChildOfType(_variationContextAccessor, DocumentTypeAliases.RegistrationCompletedEmail);
             var savedFormDataNode = formSettings.GetPropertyValue<IPublishedContent>(DocumentPropertyAliases.FormSavedFormData);
 
             // save data as content node

@@ -2,7 +2,7 @@
   "gridEditors": [
     {
       "name": "Google Map",
-      "alias": "googlemap",
+      "alias": "my.googlemap",
       "view": "/App_Plugins/googlemap/editor.html",
       "render": "/App_Plugins/googlemap/render.cshtml",
       "icon": "icon-map-location"

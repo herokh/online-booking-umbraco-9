@@ -8,14 +8,20 @@ namespace OnlineBooking.Extensions
     {
         public static IServiceCollection AddDependencyGroup(this IServiceCollection services)
         {
+            RegisterApplicationServices(services);
+
+            return services;
+        }
+
+        private static void RegisterApplicationServices(IServiceCollection services)
+        {
             services.AddTransient<IHeaderService, HeaderService>();
             services.AddTransient<IFooterService, FooterService>();
             services.AddTransient<INewsService, NewsService>();
             services.AddTransient<IVaccineRegistrationService, VaccineRegistrationService>();
             services.AddTransient<IEmailService, EmailService>();
             services.AddTransient<IEmailTemplateService, EmailTemplateService>();
-
-            return services;
+            services.AddTransient<IChatbotService, ChatbotService>();
         }
     }
 }

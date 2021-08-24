@@ -38,6 +38,14 @@ namespace OnlineBooking.Application.Extensions
             return formSettings;
         }
 
+        public static IPublishedContent GetChatbotSettingsNode(this IPublishedContent contentAtRoot, IVariationContextAccessor variationContextAccessor)
+        {
+            var settings = contentAtRoot.GetSettingsNode(variationContextAccessor);
+            var chatbotSettings = settings?.FirstChildOfType(variationContextAccessor, DocumentTypeAliases.ChatbotSettings);
+
+            return chatbotSettings;
+        }
+
         public static string GetPropertyValueString(this IPublishedContent publishedContent, string propertyAlias, string defaultValue = "")
         {
             if (publishedContent == null)

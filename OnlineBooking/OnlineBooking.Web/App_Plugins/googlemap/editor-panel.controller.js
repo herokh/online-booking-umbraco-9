@@ -1,4 +1,4 @@
-﻿angular.module("umbraco").controller("googlemap.panel.grideditorcontroller", function ($scope) {
+﻿angular.module("umbraco").controller("my.googlemap.panel.grideditorcontroller", function ($scope) {
 
     $scope.submit = function () {
         if ($scope.model.submit) {

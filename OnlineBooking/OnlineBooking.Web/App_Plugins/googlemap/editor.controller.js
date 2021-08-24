@@ -1,4 +1,4 @@
-﻿angular.module("umbraco").controller("googlemap.grideditorcontroller", function ($scope, $sce, editorService) {
+﻿angular.module("umbraco").controller("my.googlemap.grideditorcontroller", function ($scope, $sce, editorService) {
 
     $scope.init = function () {
         if (!$scope.control.value) {

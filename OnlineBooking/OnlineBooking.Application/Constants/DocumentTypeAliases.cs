@@ -9,8 +9,9 @@
         public const string WebSettings = "webSettings";
         public const string HeaderSettings = "headerSettings";
         public const string FooterSettings = "footerSettings";
+        public const string ChatbotSettings = "chatbotSettings";
         public const string FormMappings = "formMappings";
         public const string FormSettings = "formSettings";
-        public const string VaccineRegistrationEmailSettings = "vaccineRegistrationEmailSettings";
+        public const string RegistrationCompletedEmail = "registrationCompletedEmail";
     }
 }
