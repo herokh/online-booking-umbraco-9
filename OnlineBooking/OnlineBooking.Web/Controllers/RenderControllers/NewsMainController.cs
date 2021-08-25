@@ -8,7 +8,7 @@ using OnlineBooking.Controllers.Base;
 
 namespace OnlineBooking.Controllers.RenderControllers
 {
-    public class NewsMainController : BaseRenderController
+    public class NewsMainController : RenderBaseController
     {
         private readonly INewsService _newsService;
         public NewsMainController(ILogger<RenderController> logger,

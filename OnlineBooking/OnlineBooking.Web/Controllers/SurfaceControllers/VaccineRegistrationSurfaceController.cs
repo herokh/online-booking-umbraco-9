@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace OnlineBooking.Controllers.SurfaceControllers
 {
-    public class VaccineRegistrationSurfaceController : BaseSurfaceController
+    public class VaccineRegistrationSurfaceController : SurfaceBaseController
     {
         private readonly IVaccineRegistrationService _vaccineRegistrationService;
         private readonly IHttpContextAccessor _httpContextAccessor;

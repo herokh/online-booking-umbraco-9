@@ -5,7 +5,7 @@ using OnlineBooking.Controllers.Base;
 
 namespace OnlineBooking.Controllers.RenderControllers
 {
-    public class NewsItemController : BaseRenderController
+    public class NewsItemController : RenderBaseController
     {
         private readonly INewsService _newsService;
         public NewsItemController(Microsoft.Extensions.Logging.ILogger<RenderController> logger,

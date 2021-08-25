@@ -22,6 +22,7 @@ namespace OnlineBooking.Extensions
             services.AddTransient<IEmailService, EmailService>();
             services.AddTransient<IEmailTemplateService, EmailTemplateService>();
             services.AddTransient<IChatbotService, ChatbotService>();
+            services.AddTransient<IFlightSearchService, FlightSearchService>();
         }
     }
 }

@@ -7,10 +7,10 @@ using Umbraco.Extensions;
 
 namespace OnlineBooking.Controllers.Base
 {
-    public abstract class BaseSurfaceController : SurfaceController
+    public abstract class SurfaceBaseController : SurfaceController
     {
         protected readonly IVariationContextAccessor _variationContextAccessor;
-        protected BaseSurfaceController(Umbraco.Cms.Core.Web.IUmbracoContextAccessor umbracoContextAccessor,
+        protected SurfaceBaseController(Umbraco.Cms.Core.Web.IUmbracoContextAccessor umbracoContextAccessor,
             Umbraco.Cms.Infrastructure.Persistence.IUmbracoDatabaseFactory databaseFactory,
             Umbraco.Cms.Core.Services.ServiceContext services,
             Umbraco.Cms.Core.Cache.AppCaches appCaches,
