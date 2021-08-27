@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OnlineBooking.Hangfire.Extensions;
 using System;
+using System.Text.Json.Serialization;
 using Umbraco.Extensions;
 
 namespace OnlineBooking.Hangfire
@@ -33,7 +34,13 @@ namespace OnlineBooking.Hangfire
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                .AddJsonOptions(c =>
+                {
+                    c.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                });
+
+            services.AddSwaggerGen();
 
             services.AddUmbraco(_env, _config)
                 .AddBackOffice()
@@ -75,13 +82,20 @@ namespace OnlineBooking.Hangfire
 
             app.UseAuthorization();
 
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "OnlineBooking.Hangfire API V1");
+            });
+
             app.UseUmbraco()
                 .WithMiddleware(u =>
                 {
                     u.UseBackOffice();
                 });
 
-            app.UseHangfireDashboard("/jobs");
+            app.UseHangfireDashboard();
 
             app.UseEndpoints(endpoints =>
             {

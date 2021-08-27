@@ -350,3 +350,5 @@ MigrationBackup/
 .ionide/
 OnlineBooking/OnlineBooking.Web/umbraco/Data/TEMP/
 OnlineBooking/OnlineBooking.Web/umbraco/mediacache/
+OnlineBooking/OnlineBooking.Hangfire/umbraco/
+OnlineBooking/OnlineBooking.Hangfire/wwwroot/umbraco/

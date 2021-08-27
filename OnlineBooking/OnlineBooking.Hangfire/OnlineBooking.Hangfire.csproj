@@ -12,6 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Hangfire" Version="1.7.24" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.5" />
     <PackageReference Include="Umbraco.Cms" Version="9.0.0-rc002" />
   </ItemGroup>
 
